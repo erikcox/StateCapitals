@@ -1,3 +1,12 @@
+/*
+ Author: Erik Cox
+ Date  : 11/04/14
+ Homework Assignment: US State Capital Game
+ File Name: Game.java
+ Objective: This is a quiz game for U.S. state capitals.
+            This activity is for the game page.
+*/
+
 package fall.cs211d.statecapitals;
 
 import android.app.Activity;
