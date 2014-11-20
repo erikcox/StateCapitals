@@ -1,3 +1,12 @@
+<!--
+    Author: Erik Cox
+    Date  : 11/04/14
+    Homework Assignment: US State Capital Game
+    File Name: activity_top_scores.xml
+    Objective: This is a quiz game for U.S. state capitals.
+    This activity is for the top score page.
+-->
+
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
