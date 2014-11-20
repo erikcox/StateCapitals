@@ -20,6 +20,10 @@
             android:name="fall.cs211d.statecapitals.Game"
             android:label="@string/title_activity_game" >
         </activity>
+        <activity
+            android:name="fall.cs211d.statecapitals.TopScores"
+            android:label="@string/title_activity_top_scores" >
+        </activity>
     </application>
 
 </manifest>

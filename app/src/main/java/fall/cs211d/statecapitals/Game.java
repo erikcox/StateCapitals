@@ -10,9 +10,12 @@
 package fall.cs211d.statecapitals;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
@@ -20,9 +23,9 @@ import android.widget.Button;
 public class Game extends Activity
 {
 
-    Button start;
-    Button score;
-    Button quit;
+    Button submitScoreBtn;
+    Button homeBtn;
+    Button quitBtn;
 
     @Override
     protected void onCreate(Bundle b)
@@ -31,9 +34,9 @@ public class Game extends Activity
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_game);
 
-        start = (Button) findViewById(R.id.startGameButton);
-        score = (Button) findViewById(R.id.scoreButton);
-        quit = (Button) findViewById(R.id.quitButton);
+        submitScoreBtn = (Button) findViewById(R.id.submitGameButton);
+        homeBtn = (Button) findViewById(R.id.homeButton);
+        quitBtn = (Button) findViewById(R.id.quitButton);
     }
 
 
@@ -60,5 +63,28 @@ public class Game extends Activity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    /************** homeScreen() ******************************************************************/
+    public void homeScreen(View view) {
+        Log.e("STATE_CAP", "HOME button clicked");
+        // TODO: add validation / warning before leaving this page
+        Intent splash = new Intent(this, Splash.class);
+        startActivity(splash);
+        finish();
+    }
+
+    /************** viewScore() *******************************************************************/
+    public void viewScore(View view) {
+        Log.e("STATE_CAP", "SCORE button clicked");
+        // TODO: Add some logic to pass in the score & validate the input
+        Intent score = new Intent(this, TopScores.class);
+        startActivity(score);
+        finish();
+    }
+
+    /************** quitGame() ********************************************************************/
+    public void quitGame(View view) {
+        Log.e("STATE_CAP", "QUIT button clicked");
+        finish();
     }
 }
