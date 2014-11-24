@@ -65,7 +65,8 @@ public class Game extends Activity
         return super.onOptionsItemSelected(item);
     }
     /************** homeScreen() ******************************************************************/
-    public void homeScreen(View view) {
+    public void homeScreen(View view)
+    {
         Log.e("STATE_CAP", "HOME button clicked");
         // TODO: add validation / warning before leaving this page
         Intent splash = new Intent(this, Splash.class);
@@ -74,7 +75,8 @@ public class Game extends Activity
     }
 
     /************** viewScore() *******************************************************************/
-    public void viewScore(View view) {
+    public void viewScore(View view)
+    {
         Log.e("STATE_CAP", "SCORE button clicked");
         // TODO: Add some logic to pass in the score & validate the input
         Intent score = new Intent(this, TopScores.class);
@@ -83,7 +85,8 @@ public class Game extends Activity
     }
 
     /************** quitGame() ********************************************************************/
-    public void quitGame(View view) {
+    public void quitGame(View view)
+    {
         Log.e("STATE_CAP", "QUIT button clicked");
         finish();
     }

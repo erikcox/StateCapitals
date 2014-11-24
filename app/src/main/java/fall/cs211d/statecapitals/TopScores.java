@@ -65,7 +65,8 @@ public class TopScores extends Activity
         return super.onOptionsItemSelected(item);
     }
     /************** homeScreen() ******************************************************************/
-    public void homeScreen(View view) {
+    public void homeScreen(View view)
+    {
         Log.e("STATE_CAP", "HOME button clicked");
         Intent splash = new Intent(this, Splash.class);
         startActivity(splash);
@@ -73,7 +74,8 @@ public class TopScores extends Activity
     }
 
     /************** startGame() *******************************************************************/
-    public void startGame(View view) {
+    public void startGame(View view)
+    {
         Log.e("STATE_CAP", "START button clicked");
         Intent game = new Intent(this, Game.class);
         startActivity(game);
@@ -81,7 +83,8 @@ public class TopScores extends Activity
     }
 
     /************** quitGame() ********************************************************************/
-    public void quitGame(View view) {
+    public void quitGame(View view)
+    {
         Log.e("STATE_CAP", "QUIT button clicked");
         finish();
     }
