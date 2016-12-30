@@ -110,10 +110,12 @@ public class Splash extends Activity
         if (dbloc.exists())
         {
             // nothing to do, just load it
+            Log.d("STATE_CAP", "dbloc exists"); // For debug
         }else
         {
             try
             {
+                Log.d("STATE_CAP", "dbloc doesn't exist"); // For debug
                 String states[] = new String[50];
                 String capitals[] = new String[50];
                 Scanner sc = new Scanner(getResources().openRawResource(R.raw.us_states));

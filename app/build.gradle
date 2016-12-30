@@ -1,20 +1,23 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion '19.1.0'
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
     defaultConfig {
-        applicationId "fall.cs211d.statecapitals"
-        minSdkVersion 19
-        targetSdkVersion 19
+        applicationId "rocks.ecox.statecapitals"
+        minSdkVersion 16
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
         release {
             minifyEnabled true
-            //runProguard false
-            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
         }
     }
     productFlavors {
